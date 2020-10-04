@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F42122752529AE7F00ED62EF /* TWSNMPAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42122742529AE7F00ED62EF /* TWSNMPAppApp.swift */; };
+		F42122772529AE7F00ED62EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42122762529AE7F00ED62EF /* ContentView.swift */; };
+		F42122792529AE8200ED62EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F42122782529AE8200ED62EF /* Assets.xcassets */; };
+		F421227C2529AE8200ED62EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F421227B2529AE8200ED62EF /* Preview Assets.xcassets */; };
+		F42122872529AE8200ED62EF /* TWSNMPAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42122862529AE8200ED62EF /* TWSNMPAppTests.swift */; };
+		F42122922529AE8200ED62EF /* TWSNMPAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42122912529AE8200ED62EF /* TWSNMPAppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F42122832529AE8200ED62EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F42122692529AE7E00ED62EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F42122702529AE7F00ED62EF;
+			remoteInfo = TWSNMPApp;
+		};
+		F421228E2529AE8200ED62EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F42122692529AE7E00ED62EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F42122702529AE7F00ED62EF;
+			remoteInfo = TWSNMPApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F42122712529AE7F00ED62EF /* TWSNMPApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWSNMPApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F42122742529AE7F00ED62EF /* TWSNMPAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWSNMPAppApp.swift; sourceTree = "<group>"; };
+		F42122762529AE7F00ED62EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F42122782529AE8200ED62EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F421227B2529AE8200ED62EF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F421227D2529AE8200ED62EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F42122822529AE8200ED62EF /* TWSNMPAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TWSNMPAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F42122862529AE8200ED62EF /* TWSNMPAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWSNMPAppTests.swift; sourceTree = "<group>"; };
+		F42122882529AE8200ED62EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F421228D2529AE8200ED62EF /* TWSNMPAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TWSNMPAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F42122912529AE8200ED62EF /* TWSNMPAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWSNMPAppUITests.swift; sourceTree = "<group>"; };
+		F42122932529AE8200ED62EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F421226E2529AE7F00ED62EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F421227F2529AE8200ED62EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F421228A2529AE8200ED62EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F42122682529AE7E00ED62EF = {
+			isa = PBXGroup;
+			children = (
+				F42122732529AE7F00ED62EF /* TWSNMPApp */,
+				F42122852529AE8200ED62EF /* TWSNMPAppTests */,
+				F42122902529AE8200ED62EF /* TWSNMPAppUITests */,
+				F42122722529AE7F00ED62EF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F42122722529AE7F00ED62EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F42122712529AE7F00ED62EF /* TWSNMPApp.app */,
+				F42122822529AE8200ED62EF /* TWSNMPAppTests.xctest */,
+				F421228D2529AE8200ED62EF /* TWSNMPAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F42122732529AE7F00ED62EF /* TWSNMPApp */ = {
+			isa = PBXGroup;
+			children = (
+				F42122742529AE7F00ED62EF /* TWSNMPAppApp.swift */,
+				F42122762529AE7F00ED62EF /* ContentView.swift */,
+				F42122782529AE8200ED62EF /* Assets.xcassets */,
+				F421227D2529AE8200ED62EF /* Info.plist */,
+				F421227A2529AE8200ED62EF /* Preview Content */,
+			);
+			path = TWSNMPApp;
+			sourceTree = "<group>";
+		};
+		F421227A2529AE8200ED62EF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F421227B2529AE8200ED62EF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F42122852529AE8200ED62EF /* TWSNMPAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				F42122862529AE8200ED62EF /* TWSNMPAppTests.swift */,
+				F42122882529AE8200ED62EF /* Info.plist */,
+			);
+			path = TWSNMPAppTests;
+			sourceTree = "<group>";
+		};
+		F42122902529AE8200ED62EF /* TWSNMPAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F42122912529AE8200ED62EF /* TWSNMPAppUITests.swift */,
+				F42122932529AE8200ED62EF /* Info.plist */,
+			);
+			path = TWSNMPAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F42122702529AE7F00ED62EF /* TWSNMPApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F42122962529AE8200ED62EF /* Build configuration list for PBXNativeTarget "TWSNMPApp" */;
+			buildPhases = (
+				F421226D2529AE7F00ED62EF /* Sources */,
+				F421226E2529AE7F00ED62EF /* Frameworks */,
+				F421226F2529AE7F00ED62EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TWSNMPApp;
+			productName = TWSNMPApp;
+			productReference = F42122712529AE7F00ED62EF /* TWSNMPApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F42122812529AE8200ED62EF /* TWSNMPAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F42122992529AE8200ED62EF /* Build configuration list for PBXNativeTarget "TWSNMPAppTests" */;
+			buildPhases = (
+				F421227E2529AE8200ED62EF /* Sources */,
+				F421227F2529AE8200ED62EF /* Frameworks */,
+				F42122802529AE8200ED62EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F42122842529AE8200ED62EF /* PBXTargetDependency */,
+			);
+			name = TWSNMPAppTests;
+			productName = TWSNMPAppTests;
+			productReference = F42122822529AE8200ED62EF /* TWSNMPAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F421228C2529AE8200ED62EF /* TWSNMPAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F421229C2529AE8200ED62EF /* Build configuration list for PBXNativeTarget "TWSNMPAppUITests" */;
+			buildPhases = (
+				F42122892529AE8200ED62EF /* Sources */,
+				F421228A2529AE8200ED62EF /* Frameworks */,
+				F421228B2529AE8200ED62EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F421228F2529AE8200ED62EF /* PBXTargetDependency */,
+			);
+			name = TWSNMPAppUITests;
+			productName = TWSNMPAppUITests;
+			productReference = F421228D2529AE8200ED62EF /* TWSNMPAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F42122692529AE7E00ED62EF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					F42122702529AE7F00ED62EF = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+					F42122812529AE8200ED62EF = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = F42122702529AE7F00ED62EF;
+					};
+					F421228C2529AE8200ED62EF = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = F42122702529AE7F00ED62EF;
+					};
+				};
+			};
+			buildConfigurationList = F421226C2529AE7E00ED62EF /* Build configuration list for PBXProject "TWSNMPApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F42122682529AE7E00ED62EF;
+			productRefGroup = F42122722529AE7F00ED62EF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F42122702529AE7F00ED62EF /* TWSNMPApp */,
+				F42122812529AE8200ED62EF /* TWSNMPAppTests */,
+				F421228C2529AE8200ED62EF /* TWSNMPAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F421226F2529AE7F00ED62EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F421227C2529AE8200ED62EF /* Preview Assets.xcassets in Resources */,
+				F42122792529AE8200ED62EF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F42122802529AE8200ED62EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F421228B2529AE8200ED62EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F421226D2529AE7F00ED62EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F42122772529AE7F00ED62EF /* ContentView.swift in Sources */,
+				F42122752529AE7F00ED62EF /* TWSNMPAppApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F421227E2529AE8200ED62EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F42122872529AE8200ED62EF /* TWSNMPAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F42122892529AE8200ED62EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F42122922529AE8200ED62EF /* TWSNMPAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F42122842529AE8200ED62EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F42122702529AE7F00ED62EF /* TWSNMPApp */;
+			targetProxy = F42122832529AE8200ED62EF /* PBXContainerItemProxy */;
+		};
+		F421228F2529AE8200ED62EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F42122702529AE7F00ED62EF /* TWSNMPApp */;
+			targetProxy = F421228E2529AE8200ED62EF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F42122942529AE8200ED62EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F42122952529AE8200ED62EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F42122972529AE8200ED62EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"TWSNMPApp/Preview Content\"";
+				DEVELOPMENT_TEAM = YGW25YP3NM;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = TWSNMPApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.twise.TWSNMPApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F42122982529AE8200ED62EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"TWSNMPApp/Preview Content\"";
+				DEVELOPMENT_TEAM = YGW25YP3NM;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = TWSNMPApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.twise.TWSNMPApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F421229A2529AE8200ED62EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YGW25YP3NM;
+				INFOPLIST_FILE = TWSNMPAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.twise.TWSNMPAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TWSNMPApp.app/TWSNMPApp";
+			};
+			name = Debug;
+		};
+		F421229B2529AE8200ED62EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YGW25YP3NM;
+				INFOPLIST_FILE = TWSNMPAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.twise.TWSNMPAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TWSNMPApp.app/TWSNMPApp";
+			};
+			name = Release;
+		};
+		F421229D2529AE8200ED62EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YGW25YP3NM;
+				INFOPLIST_FILE = TWSNMPAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.twise.TWSNMPAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TWSNMPApp;
+			};
+			name = Debug;
+		};
+		F421229E2529AE8200ED62EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YGW25YP3NM;
+				INFOPLIST_FILE = TWSNMPAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.twise.TWSNMPAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TWSNMPApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F421226C2529AE7E00ED62EF /* Build configuration list for PBXProject "TWSNMPApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F42122942529AE8200ED62EF /* Debug */,
+				F42122952529AE8200ED62EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F42122962529AE8200ED62EF /* Build configuration list for PBXNativeTarget "TWSNMPApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F42122972529AE8200ED62EF /* Debug */,
+				F42122982529AE8200ED62EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F42122992529AE8200ED62EF /* Build configuration list for PBXNativeTarget "TWSNMPAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F421229A2529AE8200ED62EF /* Debug */,
+				F421229B2529AE8200ED62EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F421229C2529AE8200ED62EF /* Build configuration list for PBXNativeTarget "TWSNMPAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F421229D2529AE8200ED62EF /* Debug */,
+				F421229E2529AE8200ED62EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F42122692529AE7E00ED62EF /* Project object */;
+}
