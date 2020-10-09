@@ -2,7 +2,7 @@
 //  TWSNMPAppTests.swift
 //  TWSNMPAppTests
 //
-//  Created by 山居正幸 on 2020/10/04.
+//  Created by twsnmp on 2020/10/04.
 //
 
 import XCTest
@@ -18,9 +18,16 @@ class TWSNMPAppTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testGetMapStatus() throws {
+      let exp = expectation(description: "Wait TWSNMP")
+      let d = TwsnmpDataStore()
+      let twsnmp = Twsnmp(name:"test", url: "https://192.168.1.250:8192", user: "a", password: "a")
+      d.add(twsnmp: twsnmp)
+      d.getMapStatus(id: twsnmp.id.uuidString){ r in
+        XCTAssertEqual(r,true)
+        exp.fulfill()
+      }
+      wait(for: [exp], timeout: 10.0)
     }
 
     func testPerformanceExample() throws {

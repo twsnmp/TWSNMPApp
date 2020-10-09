@@ -2,7 +2,7 @@
 //  TWSNMPAppApp.swift
 //  TWSNMPApp
 //
-//  Created by 山居正幸 on 2020/10/04.
+//  Created by twsnmp on 2020/10/04.
 //
 
 import SwiftUI
@@ -11,7 +11,7 @@ import SwiftUI
 struct TWSNMPAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+          MainView()
         }
     }
 }

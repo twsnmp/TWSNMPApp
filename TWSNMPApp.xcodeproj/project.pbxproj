@@ -3,16 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		F42122752529AE7F00ED62EF /* TWSNMPAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42122742529AE7F00ED62EF /* TWSNMPAppApp.swift */; };
-		F42122772529AE7F00ED62EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42122762529AE7F00ED62EF /* ContentView.swift */; };
 		F42122792529AE8200ED62EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F42122782529AE8200ED62EF /* Assets.xcassets */; };
 		F421227C2529AE8200ED62EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F421227B2529AE8200ED62EF /* Preview Assets.xcassets */; };
 		F42122872529AE8200ED62EF /* TWSNMPAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42122862529AE8200ED62EF /* TWSNMPAppTests.swift */; };
 		F42122922529AE8200ED62EF /* TWSNMPAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42122912529AE8200ED62EF /* TWSNMPAppUITests.swift */; };
+		F42122A32529AFAB00ED62EF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42122A22529AFAB00ED62EF /* MainView.swift */; };
+		F42122AE2529B12F00ED62EF /* MapInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42122AD2529B12F00ED62EF /* MapInfoView.swift */; };
+		F42122B32529B1A900ED62EF /* EditModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42122B22529B1A900ED62EF /* EditModalView.swift */; };
+		F42122BD2529B21600ED62EF /* BackEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42122BC2529B21600ED62EF /* BackEnd.swift */; };
+		F42122C3252A5C3900ED62EF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F42122C2252A5C3900ED62EF /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +39,6 @@
 /* Begin PBXFileReference section */
 		F42122712529AE7F00ED62EF /* TWSNMPApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWSNMPApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42122742529AE7F00ED62EF /* TWSNMPAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWSNMPAppApp.swift; sourceTree = "<group>"; };
-		F42122762529AE7F00ED62EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F42122782529AE8200ED62EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F421227B2529AE8200ED62EF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F421227D2529AE8200ED62EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +48,10 @@
 		F421228D2529AE8200ED62EF /* TWSNMPAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TWSNMPAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42122912529AE8200ED62EF /* TWSNMPAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWSNMPAppUITests.swift; sourceTree = "<group>"; };
 		F42122932529AE8200ED62EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F42122A22529AFAB00ED62EF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		F42122AD2529B12F00ED62EF /* MapInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInfoView.swift; sourceTree = "<group>"; };
+		F42122B22529B1A900ED62EF /* EditModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditModalView.swift; sourceTree = "<group>"; };
+		F42122BC2529B21600ED62EF /* BackEnd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackEnd.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F42122C3252A5C3900ED62EF /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +104,10 @@
 			isa = PBXGroup;
 			children = (
 				F42122742529AE7F00ED62EF /* TWSNMPAppApp.swift */,
-				F42122762529AE7F00ED62EF /* ContentView.swift */,
+				F42122AD2529B12F00ED62EF /* MapInfoView.swift */,
+				F42122B22529B1A900ED62EF /* EditModalView.swift */,
+				F42122BC2529B21600ED62EF /* BackEnd.swift */,
+				F42122A22529AFAB00ED62EF /* MainView.swift */,
 				F42122782529AE8200ED62EF /* Assets.xcassets */,
 				F421227D2529AE8200ED62EF /* Info.plist */,
 				F421227A2529AE8200ED62EF /* Preview Content */,
@@ -146,6 +157,9 @@
 			dependencies = (
 			);
 			name = TWSNMPApp;
+			packageProductDependencies = (
+				F42122C2252A5C3900ED62EF /* Alamofire */,
+			);
 			productName = TWSNMPApp;
 			productReference = F42122712529AE7F00ED62EF /* TWSNMPApp.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +231,9 @@
 				Base,
 			);
 			mainGroup = F42122682529AE7E00ED62EF;
+			packageReferences = (
+				F42122C1252A5C3900ED62EF /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = F42122722529AE7F00ED62EF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,8 +276,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F42122772529AE7F00ED62EF /* ContentView.swift in Sources */,
+				F42122BD2529B21600ED62EF /* BackEnd.swift in Sources */,
+				F42122B32529B1A900ED62EF /* EditModalView.swift in Sources */,
 				F42122752529AE7F00ED62EF /* TWSNMPAppApp.swift in Sources */,
+				F42122AE2529B12F00ED62EF /* MapInfoView.swift in Sources */,
+				F42122A32529AFAB00ED62EF /* MainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,6 +600,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F42122C1252A5C3900ED62EF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F42122C2252A5C3900ED62EF /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F42122C1252A5C3900ED62EF /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F42122692529AE7E00ED62EF /* Project object */;
 }
