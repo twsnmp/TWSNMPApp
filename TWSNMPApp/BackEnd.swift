@@ -57,7 +57,7 @@ final class TwsnmpDataStore: ObservableObject  {
   var sesstion = Session()
   init(){
     do {
-      self.polling()
+      self.pollingScheduler()
       let uDef = UserDefaults.standard
       // 保存したJSONの文字列を読み出す
       let json = uDef.string(forKey: "twsnmps")
@@ -139,8 +139,13 @@ final class TwsnmpDataStore: ObservableObject  {
     self.twsnmps.remove(at: at)
     self.save()
   }
+  func pollingScheduler() {
+    self.polling()
+    Timer.scheduledTimer(withTimeInterval: 30, repeats: true) { timer in
+      self.polling()
+    }
+  }
   func polling() {
-    Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { timer in
       for  var t in self.twsnmps {
         let now = Date()
         if t.nextPolling < now {
@@ -164,7 +169,6 @@ final class TwsnmpDataStore: ObservableObject  {
           })
         }
       }
-    }
   }
   func getMapStatus(id:String,completion: @escaping (Bool) -> Void) {
     guard var twsnmp = self.find(id:id) else {
