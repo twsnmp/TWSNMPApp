@@ -26,6 +26,11 @@ struct MainView: View {
                 Image(systemName: "pencil")
               }
             }))
+            .onTapGesture(count: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/, perform: {
+              if twsnmp.changed {
+                self.dataStore.clearChanged(id:twsnmp.id.uuidString)
+              }
+            })
         }
         .onDelete(perform: onDelete)
         .onMove(perform: onMove)
@@ -46,7 +51,10 @@ struct MainView: View {
   private var addButton: some View {
     switch editMode {
     case .inactive:
-      return AnyView(Button(action: onAdd) { Image(systemName: "plus") })
+      return AnyView(
+        Button(action: onAdd) { Image(systemName: "plus") }
+          .accessibility(identifier: "addBtn")
+      )
     default:
       return AnyView(EmptyView())
     }
@@ -66,6 +74,7 @@ struct TwsnmpRow: View {
   var twsnmp: Twsnmp
   var body: some View {
     HStack(spacing: 5) {
+      changedImage
       stateImage.font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
       NavigationLink(self.twsnmp.name, destination: MapInfoView(twsnmp:self.twsnmp))
     }
@@ -91,6 +100,14 @@ struct TwsnmpRow: View {
     default:
       return AnyView(Image(systemName: "questionmark.circle.fill").foregroundColor(.gray))
     }
+  }
+  private var changedImage:some View {
+    if twsnmp.changed {
+      return AnyView(Image(systemName: "exclamationmark.arrow.triangle.2.circlepath")
+                      .foregroundColor(.red).font(.body).padding(2))
+    }
+    return AnyView(Image(systemName: "checkmark")
+                    .foregroundColor(.blue).font(.body).padding(2))
   }
 }
 

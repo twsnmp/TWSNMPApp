@@ -6,9 +6,11 @@
 //
 
 import Foundation
+import SwiftUI
 import Alamofire
 
 struct Twsnmp: Identifiable{
+  static var offset = -1.0
   var id = UUID()     // ユニークなIDを自動で設定
   var name: String
   var url : String
@@ -20,13 +22,16 @@ struct Twsnmp: Identifiable{
   var warnNodes = ""
   var repairNodes = ""
   var count = 0
-  var nextPolling = Date().addingTimeInterval(5)
+  var changed = false
+  var nextPolling = Date()
   var mapStatus = TwsnmpMapStatus()
   init(name:String,url:String,user:String,password:String){
     self.name = name
     self.url = url
     self.user = user
     self.password = password
+    self.nextPolling =  self.nextPolling.addingTimeInterval(Twsnmp.offset)
+    Twsnmp.offset += 0.1
   }
 }
 
@@ -56,12 +61,18 @@ final class TwsnmpDataStore: ObservableObject  {
   @Published  var twsnmps :[Twsnmp] = [Twsnmp]()
   var sesstion = Session()
   init(){
+    UNUserNotificationCenter.current().requestAuthorization(options: .badge) { (granted, error) in
+        if error != nil {
+          debugPrint(error!)
+        }
+    }
+    UIApplication.shared.applicationIconBadgeNumber = 0
     do {
-      self.pollingScheduler()
       let uDef = UserDefaults.standard
       // 保存したJSONの文字列を読み出す
       let json = uDef.string(forKey: "twsnmps")
       if json == nil {
+        self.pollingScheduler()
         return
       }
       //TWSNMPの登録情報に変換する
@@ -77,6 +88,7 @@ final class TwsnmpDataStore: ObservableObject  {
         }
         twsnmps.append(Twsnmp(name:name,url:url,user:user,password:password))
       }
+      self.pollingScheduler()
     } catch (let error){
       debugPrint(error)
       return
@@ -94,11 +106,9 @@ final class TwsnmpDataStore: ObservableObject  {
       encoder.outputFormatting = .prettyPrinted
       let data = try encoder.encode(saveData)
       let json = String(data: data, encoding: .utf8)!
-      print(json)
       // JSONの文字列を保存する
       let uDef = UserDefaults.standard
       uDef.set(json, forKey: "twsnmps")
-      print("saved")
     } catch {
       return
     }
@@ -139,6 +149,16 @@ final class TwsnmpDataStore: ObservableObject  {
     self.twsnmps.remove(at: at)
     self.save()
   }
+  // 変化フラグをクリア
+  func clearChanged(id:String) {
+    if var t = self.find(id:id) {
+      if t.changed {
+        t.changed = false
+        UIApplication.shared.applicationIconBadgeNumber -= 1
+        self.update(id: id, twsnmp:t, save: false)
+      }
+    }
+  }
   func pollingScheduler() {
     self.polling()
     Timer.scheduledTimer(withTimeInterval: 30, repeats: true) { timer in
@@ -146,29 +166,29 @@ final class TwsnmpDataStore: ObservableObject  {
     }
   }
   func polling() {
-      for  var t in self.twsnmps {
-        let now = Date()
-        if t.nextPolling < now {
-          t.nextPolling = now.addingTimeInterval(60)
-          self.update(id: t.id.uuidString, twsnmp:t,save:false)
-          self.getMapStatus(id: t.id.uuidString, completion: { r in
-            if r {
-              self.getMapData(id: t.id.uuidString, completion: {r in
-                if !r {
-                  t.repairNodes = "TWSNMPから取得できませんでした。"
-                  t.highNodes = t.repairNodes
-                  t.lowNodes = t.repairNodes
-                  t.warnNodes = t.repairNodes
-                  self.update(id: t.id.uuidString, twsnmp:t,save:false)
-                }
-              })
-            } else {
-              t.status = "unknown"
-              self.update(id: t.id.uuidString, twsnmp:t,save:false)
-            }
-          })
-        }
+    for  var t in self.twsnmps {
+      let now = Date()
+      if t.nextPolling < now {
+        t.nextPolling = now.addingTimeInterval(60)
+        self.update(id: t.id.uuidString, twsnmp:t,save:false)
+        self.getMapStatus(id: t.id.uuidString, completion: { r in
+          if r {
+            self.getMapData(id: t.id.uuidString, completion: {r in
+              if !r {
+                t.repairNodes = "TWSNMPから取得できませんでした。"
+                t.highNodes = t.repairNodes
+                t.lowNodes = t.repairNodes
+                t.warnNodes = t.repairNodes
+                self.update(id: t.id.uuidString, twsnmp:t,save:false)
+              }
+            })
+          } else {
+            t.status = "unknown"
+            self.update(id: t.id.uuidString, twsnmp:t,save:false)
+          }
+        })
       }
+    }
   }
   func getMapStatus(id:String,completion: @escaping (Bool) -> Void) {
     guard var twsnmp = self.find(id:id) else {
@@ -186,7 +206,6 @@ final class TwsnmpDataStore: ObservableObject  {
     sesstion = Session(configuration: configuration, serverTrustManager: ServerTrustManager(allHostsMustBeEvaluated: false, evaluators: [host: DisabledTrustEvaluator()]))
     sesstion.request(twsnmp.url+"/api/mapstatus",headers: headers)
       .responseJSON { response in
-        debugPrint(response)
         switch response.result {
         case .success:
           guard let r = response.response else {
@@ -205,9 +224,12 @@ final class TwsnmpDataStore: ObservableObject  {
           do {
             twsnmp.mapStatus = try JSONDecoder().decode(TwsnmpMapStatus.self, from: data)
             twsnmp.count += 1
+            if twsnmp.status != twsnmp.mapStatus.State && !twsnmp.changed{
+              UIApplication.shared.applicationIconBadgeNumber += 1
+              twsnmp.changed = true
+            }
             twsnmp.status = twsnmp.mapStatus.State
-            debugPrint(twsnmp.mapStatus)
-            self.update(id: twsnmp.id.uuidString, twsnmp: twsnmp)
+            self.update(id: twsnmp.id.uuidString, twsnmp: twsnmp,save:false)
             completion(true)
           } catch (let error) {
             debugPrint(error)
@@ -235,7 +257,6 @@ final class TwsnmpDataStore: ObservableObject  {
     sesstion = Session(configuration: configuration, serverTrustManager: ServerTrustManager(allHostsMustBeEvaluated: false, evaluators: [host: DisabledTrustEvaluator()]))
     sesstion.request(twsnmp.url+"/api/mapdata",headers: headers)
       .responseJSON { response in
-        debugPrint(response)
         switch response.result {
         case .success:
           guard let r = response.response else {
@@ -271,7 +292,6 @@ final class TwsnmpDataStore: ObservableObject  {
                 continue
               }
             }
-            debugPrint(twsnmp.mapStatus)
             self.update(id: twsnmp.id.uuidString, twsnmp: twsnmp,save:false)
             completion(true)
           } catch (let error) {

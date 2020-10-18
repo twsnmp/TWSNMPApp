@@ -12,7 +12,7 @@ class TWSNMPAppTests: XCTestCase {
   let d = TwsnmpDataStore()
   
   override func setUpWithError() throws {
-    let twsnmp = Twsnmp(name:"test", url: "https://192.168.1.250:8192", user: "a", password: "a")
+    let twsnmp = Twsnmp(name:"test", url: "https://lhx98.linkclub.jp/twise.co.jp/twst", user: "a", password: "a")
     d.add(twsnmp: twsnmp)
   }
   
@@ -24,7 +24,7 @@ class TWSNMPAppTests: XCTestCase {
 
   func testDataStore() throws {
     XCTAssertEqual(d.twsnmps.count,1)
-    let twsnmp = Twsnmp(name:"test1", url: "https://192.168.1.250:8192", user: "a", password: "a")
+    let twsnmp = Twsnmp(name:"test1", url: "https://lhx98.linkclub.jp/twise.co.jp/twst", user: "a", password: "a")
     d.add(twsnmp: twsnmp)
     XCTAssertEqual(d.twsnmps.count,2)
     XCTAssertEqual(d.twsnmps[1].name,"test1")

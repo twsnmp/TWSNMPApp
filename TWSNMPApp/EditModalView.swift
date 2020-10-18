@@ -26,18 +26,21 @@ struct EditModalView: View {
             .textFieldStyle(RoundedBorderTextFieldStyle())
             .frame(maxWidth: 280)
             .autocapitalization(.none)
+            .accessibility(identifier: "nameTextField")
           TextField("URL", text: $url)
             .textFieldStyle(RoundedBorderTextFieldStyle())
             .frame(maxWidth: 280)
             .autocapitalization(.none)
+            .accessibility(identifier: "urlTextField")
           TextField("ユーザーID", text: $user)
             .textFieldStyle(RoundedBorderTextFieldStyle())
             .frame(maxWidth: 280)
             .autocapitalization(.none)
+            .accessibility(identifier: "userTextField")
           SecureField("パスワード", text: $password)
             .textFieldStyle(RoundedBorderTextFieldStyle())
             .frame(maxWidth: 280)
-          
+            .accessibility(identifier: "passwordSecureField")
         }
         .frame(height: 250)
         HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: /*@START_MENU_TOKEN@*/nil/*@END_MENU_TOKEN@*/, content: {
@@ -64,6 +67,7 @@ struct EditModalView: View {
               .background(Color.accentColor)
               .cornerRadius(8)
           })
+          .accessibility(identifier: "saveBtn")
           Button(action: {
             self.isPresented.toggle()
           },
